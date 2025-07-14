@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Estate Webinar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+    }
+
+    .background-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('5050812.jpg') repeat-x top center;
+      background-size: auto 100%;
+      background-color: #111;
+      z-index: -1;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+  text-align: center;
+  padding: 5px 20px 10px; /* reduced top padding from 30px to 15px */
+  color: #fff;
+}
+
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      color: #fff;
+    }
+
+    .host-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      color: #eee;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .host-card p {
+      margin: 0 0 10px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 10px 15px;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      padding: 15px 15px 15px 25px;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px 40px;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    @media(min-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .topics-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .card {
+        min-height: 80px;
+      }
+    }
+
+    @media(max-width: 599px) {
+      .card {
+        padding: 10px 10px 10px 20px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-layer"></div>
+
+  <div class="overlay">
+    <header>
+      <h2>Webinar on</h2>
+        <h1>Buying Your 1st Home Made Easy</h1>
+    </header>
+
+    <section>
+      <!-- Host Info -->
+      <div class="host-card">
+        <p>Hello! I’m <strong>[Your Name]</strong>, a seasoned real estate advisor with over a decade of experience helping people buy their first homes confidently.</p>
+        <p>Through this webinar, I’ll guide you on what to check, how to negotiate, avoid common pitfalls, and make a well-informed decision when purchasing your flat.</p>
+      </div>
+
+      <!-- Contact Info -->
+      <h2>Contact</h2>
+<div class="contact-info">
+  📞 <strong>Phone Number:</strong>
+  <a href="tel:+919876543210">+91-9876543210</a><br>
+
+  💬 <strong>WhatsApp:</strong>
+  <a href="https://wa.me/919876543210" target="_blank">+91-9876543210</a><br>
+
+  📧 <strong>Email:</strong>
+  <a href="mailto:you@example.com">you@example.com</a><br>
+
+  📷 <strong>Instagram:</strong>
+  <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a>
+</div>
+
+
+      <!-- Topics List -->
+      <h2>Webinar topics to be discussed</h2>
+      <div class="topics-grid" id="topicsGrid"></div>
+    </section>
+
+    <footer>
+      <!-- Footer placeholder -->
+    </footer>
+  </div>
+
+  <script>
+  const topics = [
+    "1. 💰 Budget Planning Tips",
+    "2. 🏦 Home Loan Myths",
+    "3. 📊 Credit Score Basics",
+    "4. 🏗️ Trusted Builders Only",
+    "5. 📄 Legal Checkpoints",
+    "6. 🧾 RERA Registration Guide",
+    "7. ✅ Loan Eligibility Rules",
+    "8. 🧾 Stamp Duty Costs",
+    "9. 📐 Carpet vs Area",
+    "10. 🏠 Ready vs Under-Construction",
+    "11. ⚠️ Pre-Launch Risks",
+    "12. 📜 Agreement Essentials",
+    "13. 👥 Joint Ownership",
+    "14. 👩‍❤️‍👨 Buy With Spouse",
+    "15. 📍 Location Matters",
+    "16. 📶 Floor Rise Charges",
+    "17. 🛝 Needed Amenities",
+    "18. 🤝 Negotiate Smartly",
+    "19. 💸 Loan Tax Benefits",
+    "20. 📈 Capital Gains Tax",
+    "21. 🧠 Builder Tricks",
+    "22. 🧾 Hidden Charges",
+    "23. 📑 OC & CC",
+    "24. 🗺️ Read Floor Plans",
+    "25. 🔁 Resale vs New",
+    "26. 🧭 Site Visit List",
+    "27. 🏷️ Title Check",
+    "28. ⏳ Delay Clauses",
+    "29. 🧹 Maintenance Charges",
+    "30. ✅ Final Checklist"
+  ];
+
+  const grid = document.getElementById("topicsGrid");
+  topics.forEach(topic => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<p><strong>${topic}</strong></p>`;
+    grid.appendChild(card);
+  });
+</script>
+
+
+
+</body>
+</html>
